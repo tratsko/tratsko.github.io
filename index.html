@@ -3,36 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name</title>
+  <title>Timofej Ratsko | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --text: #1a1a1a;
+      --text-muted: #5c5c5c;
+      --accent: #2563eb;
+      --bg: #fafafa;
+      --card-bg: #fff;
+      --border: #e5e5e5;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 60px auto;
-      padding: 0 20px;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
       line-height: 1.6;
     }
     h1 {
-      margin-bottom: 0.2em;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0 0 0.25em;
+    }
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 48px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2:first-of-type { margin-top: 0; }
+    p { margin: 0 0 1em; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    nav {
+      margin: 24px 0 32px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
     nav a {
-      margin-right: 15px;
+      color: var(--text-muted);
+      font-weight: 500;
     }
-    .section {
-      margin-top: 40px;
+    nav a:hover { color: var(--text); }
+    .tagline {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    .job, .project {
+      margin-bottom: 24px;
+    }
+    .job-title, .project-title {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .job-meta, .project-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .job ul, .project ul {
+      margin: 0;
+      padding-left: 1.25em;
+    }
+    .job li, .project li {
+      margin-bottom: 4px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .skill {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      font-size: 0.875rem;
+      border-radius: 6px;
+    }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Your Name</h1>
-  <p>A short sentence about who you are.</p>
+  <h1>Timofej Ratsko</h1>
+  <p class="tagline">SWE Intern at Cloudflare | ex-NASA JPL | CS @ Georgia Tech</p>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <div id="about" class="section">
-    <h2>About Me</h2>
+  <section id="about">
+    <h2>About</h2>
+    <p>Software engineer with experience at NASA JPL, Cloudflare, and startups. Currently pursuing an MS in Computer Science at Georgia Tech. Passionate about building scalable systems and contributing to missions that reach beyond our planet.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-title">Software Engineer Intern</div>
+      <div class="job-meta">Cloudflare · 2025 – Present</div>
+      <ul>
+        <li>Recently joined Cloudflare as a software engineering intern.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">Software Engineer</div>
+      <div class="job-meta">Templar Screens · Sep 2025 – Present · Auburn, WA</div>
+      <ul>
+        <li>Full-time software engineering role.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">Software Engineer Intern</div>
+      <div class="job-meta">NASA Jet Propulsion Laboratory · May 2025 – Sep 2025 · La Cañada Flintridge, CA</div>
+      <ul>
+        <li>Rearchitected the front-end interface to streamline integration with multiple data sources.</li>
+        <li>Built a robust Java-based data pipeline to transfer and translate mission activity plans between two mission planning systems supporting NASA's Psyche asteroid mission.</li>
+        <li>Processed and validated 50,000+ scheduled spacecraft activities by creating a new tool used by mission planners.</li>
+        <li>Integrated JSON parsers and Java Object mappers to ensure accurate end-to-end data transformation.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">Software Engineer Intern</div>
+      <div class="job-meta">Templar Screens · Mar 2025 – May 2025 · Auburn, WA</div>
+      <ul>
+        <li>Cut page load speed by 50% through redefining REST endpoint instantiation logic.</li>
+        <li>Reduced API requests by up to 50% by implementing pagination and removing redundant calls.</li>
+        <li>Improved customer experience by building React.js configuration pages to simplify app usage.</li>
+        <li>Enhanced dashboard reporting with aggregate endpoints and SQL-based filtering, enabling real-time order metrics.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">Software Engineer Intern</div>
+      <div class="job-meta">Exchvnge Video Platform · Mar 2024 – Jun 2024 · Los Angeles, CA</div>
+      <ul>
+        <li>Led development of a video publishing platform for 100+ users to upload, share, and customize content.</li>
+        <li>Built and maintained a RESTful API using TypeScript and Firebase, handling over 1,000 daily requests.</li>
+        <li>Increased system reliability with 85% test coverage utilizing unit tests.</li>
+        <li>Streamlined collaboration, resolving 50+ merge conflicts and maintaining code quality.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="project-title">Predicting User Demographics with Machine Learning</div>
+      <ul>
+        <li>Achieved 95% accuracy in predicting user age and gender through hyperparameter tuning with Scikit-learn.</li>
+        <li>Implemented ML algorithms including logistic regression, Naive Bayes, and decision trees using Pandas.</li>
+        <li>Explored neural network architectures with perceptrons and TensorFlow.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Large-Scale Procedural World Simulation in JavaScript</div>
+      <ul>
+        <li>Built an online sandbox game without external game engines using Vanilla JavaScript, HTML, and CSS.</li>
+        <li>Designed a procedural world generation system capable of rendering environments spanning over 4 million tiles.</li>
+        <li>Optimized performance to support 1000+ dynamic entities in real-time gameplay.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Scalable Messaging Platform for Real-Time Communication</div>
+      <ul>
+        <li>Built a full-stack messaging platform enabling 100+ users to send and receive over 1,000 messages daily.</li>
+        <li>Developed 10+ RESTful services in Node.js for real-time communication.</li>
+        <li>Integrated PlanetScale-hosted MySQL for consistent data reliability and uptime.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> JavaScript, Java, Python, C#, SQL, TypeScript</p>
+    <p><strong>Frameworks & Tools:</strong> Node.js, React.js, Firebase, Azure, CI/CD, Serverless Computing</p>
+    <div class="skills">
+      <span class="skill">RESTful API</span>
+      <span class="skill">Microservices</span>
+      <span class="skill">TDD</span>
+      <span class="skill">Agile</span>
+      <span class="skill">MVC</span>
+      <span class="skill">OOP</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <a href="mailto:timratsko909@gmail.com">timratsko909@gmail.com</a>
+      <a href="https://linkedin.com/in/tim-ratsko" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/tratsko" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+</body>
+</html>
